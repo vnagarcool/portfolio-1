@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f007602f18.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -38,15 +39,86 @@
                     </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links">Skills</p>
-                        <p class="tab-links">Expirance</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('expirance')">Expirance</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-
+                    <div class="tab-contents active-tab" id="expirance">
+                        <ul>
+                            <li><span>2017-2018</span><br>Business Associate Exeicutive at Eduncle</li>
+                            <li><span>2018</span><br>Business Development Manager at Extramarks</li>
+                            <li><span>2021</span><br>Business Development Manager at Motion Insititute</li>
+                            <li><span>2022</span><br>Business Development Manager at Indiamart</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="education">
+                        <ul>
+                            <li><span>2022</span><br>Full Stack Java Developer at simplilearn</li>
+                            <li><span>2017</span><br>B-tech from RTU, Kota.</li>
+                            <li><span>2012</span><br>12th from SVVN School kota</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="skills">
+                        <ul>
+                            <li><span>FSJD</span><br>Full Stack Java Developer</li>
+                            <li><span>web Development</span><br>Web Developer</li>
+                            <li><span>App Development</span><br>Building Android/ios app</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+<!-----------------services------------------------------------------>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-duotone fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>add discription </p>
+                    <a href="#">learn more</a>
+                </div>
+                
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>front end web application</h2>
+                    <p>add discription </p>
+                    <a href="#">learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-user-cowboy"></i>
+                    <h2>back-end web application</h2>
+                    <p>add discription </p>
+                    <a href="#">learn more</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
 
 </body>
 </html>
