@@ -11,15 +11,16 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/vecteezy_illustration-vector-logo-template-of-v-initial-letter-for_.jpg" class="logo">
-                <ul>
-                    <li> <a href="#">Home</a></li>
-                    <li> <a href="#">About</a></li>
-                    <li> <a href="#">Services</a></li>
-                    <li> <a href="#">Portfolio</a></li>
-                    <li> <a href="#">Contact</a></li>
-
+                <span style='font-size:100px;'>&#120141;</span> 
+                <ul id="sidemenu">
+                    <li> <a href="#header">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#services">Services</a></li>
+                    <li> <a href="#portfolio">Portfolio</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
         </div>
         <div class="header-text">
@@ -36,11 +37,11 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>hey this side vinod from kota rajasthan . i have done b-tech 2017. my collage name: RTU, kota rajasthan. i am full stack java developer. i am certified by simplilearn.
-                    </p>
+                    </p><br> <br>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('expirance')">Expirance</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p><br>
+                        <p class="tab-links" onclick="opentab('expirance')">Expirance</p><br>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="expirance">
@@ -61,14 +62,18 @@
                     <div class="tab-contents " id="skills">
                         <ul>
                             <li><span>FSJD</span><br>Full Stack Java Developer</li>
-                            <li><span>web Development</span><br>Web Developer</li>
-                            <li><span>App Development</span><br>Building Android/ios app</li>
+                            <li><span>Web Development</span><br>HTML, CSS, Servlets, jsp, Basic knowldge of javaScript, TypeScript</li>
+                            <li><span>IDE:</span><br>Eclips, Visual Studio code</li>
+                            <li><span>Languages</span><br>Core Java/Adv. java</li>
+                            <li><span>Database</span><br>MySql</li>
+                            <li><span>Version control</span><br>Git</li>
+                            
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    
 <!-----------------services------------------------------------------>
 
     <div id="services">
@@ -79,29 +84,107 @@
                     <i class="fa-duotone fa-code"></i>
                     <h2>Web Development</h2>
                     <p>add discription </p>
-                    <a href="#">learn more</a>
+                    <a href="#">Learn more</a>
                 </div>
                 
                 <div>
                     <i class="fa-solid fa-crop-simple"></i>
                     <h2>front end web application</h2>
                     <p>add discription </p>
-                    <a href="#">learn more</a>
+                    <a href="#">Learn more</a>
                 </div>
 
                 <div>
                     <i class="fa-regular fa-user-cowboy"></i>
                     <h2>back-end web application</h2>
                     <p>add discription </p>
-                    <a href="#">learn more</a>
+                    <a href="#">Learn more</a>
                 </div>
 
             </div>
         </div>
 
+
+    <!-------------portfolio-------------->
+    <div id="portfolio">
+        <h1 class ="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/flight-search-jmillo.png" alt="">
+                <div class="layer">
+                    <h3>Flight Booking Website</h3>
+                    <P>● A search form in the homepage to allow entry of travel details, like the date of travel, source, destination, and the number of persons.
+                     ● Based on the travel details entered, it will show the available flights with their ticket prices. ● Once a person selects a flight to book,
+                        they will be taken to a register page where they must fill in their personal details. </P>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/food 2.jpg" alt="">
+                <div class="layer">
+                    <h3>Food Order Website</h3>
+                    <P>Sign-in to the application to maintain a record of activities
+                        Search for food items based on the search keyword
+                        Apply filters and sort results based on different cuisines to get the best deals
+                        Add all the selected food items to a cart and customize the purchase at the end
+                        Perform a seamless payment process
+                        Get an order summary details page once the payment is complete</P>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/liberty-trainer-jungle-boot-olive-500x500 1.webp" alt="">
+                <div class="layer">
+                    <h3>Shoes Booking Website</h3>
+                    <P>LibertyTrends Shoes is a company that manufactures and sells sports shoes. They have a walk-in store, and now, they wish to launch their e-commerce portal LibertyTrends.com.</P>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    
+    
+
+    <a href="#"class="btn">See more</a>
+
     </div>
+    </div>
+    <!---------------contact information ------------------------------------------------------------------------------->
 
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left"></div>
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fas fa-phone-square-alt"></i>+91 7976370077</p>
+                <p> <i class="fas fa-phone-square-alt"></i>+91 7878727054</p>
+               <p> <i class="fa-sharp fa-solid fa-paper-plane"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vnagarcool@gmail.com">vnagarcool@gmail.com</a>
+                <div class="social-icons">
+					
+						<a href="https://www.linkedin.com/in/vinod-nagar-58a656237/"><i class="fa fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/vnagarcool"><i class="fa fa-github fa-2"></i></a>
+						<a href="https://www.instagram.com/official__vinod/"><i class="fa fa-instagram fa-2"></i></a>
+						<a href="https://www.facebook.com/vinod.nagar.562/"><i class="fa fa-facebook fa-2"></i></a></div>
 
+                     <a href="images/Vinod Nagar Updated resume 2022.pdf" download  class="btn btn2">Download CV</a></div>
+					
+                <div class="contact-right"></div>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name ="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="Submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright"><i class="fa-solid fa-copyright"></i>
+        <p>Copyright Vinod Nagar </p>
+    </div>
+    
     <script>
 
         var tablinks = document.getElementsByClassName("tab-links");
@@ -118,6 +201,37 @@
             document.getElementById(tabname).classList.add("active-tab")
         }
 
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw6vyd5jCRAAAHnUhiXXkz97ap_j9egrxfJKhQlUCAbI8sLpOvkkcHWoJDhMp4Y6SQFwA/exec>'
+            const form =document.forms['submit-to-google-sheet']
+            const msg =document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body:new FormData(form)})
+                .then(Response => {
+                    msg.innerHTML = "Message sent sucessfully"
+                    setTimeout(function(){
+                        msg.innerHTML=""
+                    },5000)
+                    form.reset()
+                })
+                
+                
+                .catch(error => console.error('Error!', error.message))
+            })
     </script>
 
 </body>
